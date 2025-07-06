@@ -1,0 +1,17 @@
+# Receipt Task Printer Dependencies
+# Complete project dependencies for all milestones
+
+# Python version requirement
+# Requires Python 3.11+
+
+# Standard library dependencies (no installation needed):
+# - tkinter (GUI framework)
+# - logging (application logging)
+# - datetime (timestamping)
+# - typing (type hints)
+
+# M1 dependencies:
+pywin32>=306  # Windows API for printer communication
+
+# M2 dependencies:
+pyinstaller>=5.0  # For creating standalone executable 
