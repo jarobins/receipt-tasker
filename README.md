@@ -200,16 +200,24 @@ This project is developed according to the specifications provided in the projec
 
 ### Build Standalone Executable (Windows)
 
-1. **Install PyInstaller**
+1. **Install PyInstaller** (if not already installed)
    ```bash
    pip install pyinstaller
    ```
-2. **Build the executable**
+
+2. **Build the executable using the spec file**
    ```bash
-   pyinstaller --onefile --noconsole --icon=app.ico receipt_tasks.spec
+   pyinstaller receipt_tasks.spec
    ```
-   - The output will be in the `dist/` folder as `ReceiptTaskPrinter.exe`.
-   - You can set your own icon by replacing `app.ico` (optional).
+   - The output will be in the `dist/` folder as `ReceiptTaskPrinter.exe`
+   - The spec file is already configured for single-file build with no console window
+
+3. **Alternative: Build without spec file**
+   ```bash
+   pyinstaller --onefile --noconsole main.py
+   ```
+   - Use this if you want to customize the build options
+   - Add `--icon=app.ico` if you have an icon file
 
 ### Packaging Notes
 - All dependencies (including pywin32) are bundled.
